@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/*Footer - Pie de pagina*/
+
+.container-footer{
+	width: 100%;
+	padding: 40px 0;
+	background: black;
+	margin-top: 40px;
+}
+
+.container-footer footer{
+	max-width: 1200px;
+	margin: auto;
+}
+
+.container-footer footer .logo-footer{
+	text-align: center;
+}
+
+.container-footer footer .logo-footer img{
+	width: 100px;
+	border-radius: 100%;
+}
+
+.container-footer footer .redes-footer{
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+.container-footer footer .redes-footer .icon-redes-footer{
+	font-size: 20px;
+	margin: 20px;
+	background: #efefef;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 100%;
+	color: #a2a2a2;
+}
+
+footer .redes-footer .fa-facebook-f:hover{
+	background: #41579A;
+	color: #fff;
+}
+
+footer .redes-footer .fa-instagram:hover{
+	background: linear-gradient(to top right, #FCDE30, #E9712A, #D2313B, #AE4198, #7540A1, #5443A8);
+	color: #fff;
+}
+
+footer .redes-footer .fa-twitter:hover{
+	background: #25E0DE;
+	color: #fff;
+}
+
+footer .redes-footer .fa-youtube:hover{
+	background: #E12828;
+	color: #fff;
+}
+
+.container-footer footer hr{
+	margin-top: 20px;
+	border: none;
+	height: 2px;
+	background: #a8a8a87a;
+}
+
+.container-footer h4{
+	text-align: center;
+	margin-top: 20px;
+	color: #8e8e8e;
+	font-weight: 500;
+}
+
+/*Responsive Desing - Adaptable a dispositivos moviles*/
+
+@media screen and (max-width: 1220px){
+    .container-content,
+    .container-footer footer{
+        max-width: 1000px;
+        padding: 0 20px;
+    }
+
+}
+
+
+@media screen and (max-width: 1020px){
+    .container-content{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    article{
+        box-shadow: 0 0 0 0;
+    }
+
+    .container-aside{
+        display: flex;
+        justify-content: center;
+    }
+
+    .container-aside aside{
+        max-width: 300px;
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width: 800px){
+	.container-aside{
+		flex-wrap: wrap;
+	}
+}

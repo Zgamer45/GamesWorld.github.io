@@ -1,0 +1,168 @@
+/*Contenedor de categorias*/
+
+input[type="radio"]{
+	display: none;
+}
+
+.container-category{
+	width: 100%;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 20px;
+
+}
+
+.container-category label{
+	padding: 6px 40px;
+	margin: 10px;
+	font-size: 20px;
+	background: #7A1010;
+	color: white;
+	border-radius: 6px;
+	cursor: pointer;
+}
+
+.container-category label:hover{
+	opacity: 0.8;
+}
+
+/*Post - Publicaciones*/
+
+.container-post{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.posts{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /*Nos lo divide en 4 y lo que falte lo rellena con una fraccion*/
+    grid-gap: 20px; /*Deja un espaciado, sin necesitar un margin*/
+
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.posts .post{
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+
+.post .ctn-img{
+    width: 100%;
+}
+
+.post .ctn-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*Hace que la imagen se adapte a su padre*/
+}
+
+.post h2{
+    font-size: 18px;
+    margin-top: 20px;
+    padding: 0px 20px;
+}
+
+.post span{
+    display: block;
+    margin-top: 10px;
+    padding: 0px 20px;
+    text-align: justify;
+}
+
+.ctn-tag{
+    width: 100%;
+    display: flex; /*Pone las etiquetas un lado de la otrra*/
+    flex-wrap: wrap; /*Hace que las etiquetas se pongan abajo de otra si se necesita*/
+    margin-left: 16px;
+    margin-top: 10px;
+}
+
+.ctn-tag li{
+    list-style: none;
+    font-size: 14px;
+    margin: 4px;
+    padding: 6px 10px;
+    background: #e8e8e8;
+    border-radius: 6px;
+    cursor: default;
+}
+
+
+.post button{
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 10px 50px;
+    font-size: 16px;
+    background: #B61616;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.post button:hover{
+    opacity: 0.9;
+}
+
+.PC{
+	color: #807F7F;
+}
+
+.XB{
+	color: #076509;
+}
+
+.PS{
+	color: #000679;
+}
+
+.S{
+	color: #C62121;
+}
+
+/*Sistema de filtrado*/
+
+[value="TODOS"]:checked ~ .posts .post[data-category]{
+    display: block;
+}
+
+[value="PS4/PS5"]:checked ~ .posts .post:not([data-category~="PS4/PS5"]),
+[value="PC"]:checked ~ .posts .post:not([data-category~="PC"]),
+[value="Switch"]:checked ~ .posts .post:not([data-category~="Switch"]),
+[value="XBOne/XSX"]:checked ~ .posts .post:not([data-category~="XBOne/XSX"]),
+[value="Android"]:checked ~ .posts .post:not([data-category~="Android"]){
+    display: none;
+}
+
+[value="TODOS"]:checked ~ .container-category [for="TODOS"],
+[value="PS4/PS5"]:checked ~ .container-category [for="PS4/PS5"],
+[value="PC"]:checked ~ .container-category [for="PC"],
+[value="Switch"]:checked ~ .container-category [for="Switch"],
+[value="XBOne/XSX"]:checked ~ .container-category [for="XBOne/XSX"],
+[value="Android"]:checked ~ .container-category [for="Android"]{
+    background: #194C1F;
+    color: white;
+}
+
+@media screen and (max-width: 1200px){
+    .posts{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 900px){
+    .posts{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 580px){
+    .posts{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

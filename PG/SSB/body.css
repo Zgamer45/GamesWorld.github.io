@@ -1,0 +1,193 @@
+b{
+	color: darkblue;
+}
+
+a{
+    color: #860000;
+}
+
+body{
+	margin: 0;
+	background-color: #292828;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Pacifico');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+    padding: 0;
+    margin: 0;
+}
+
+.logo{
+    font-family: 'Pacifico';
+    font-size: 50px;
+}
+
+.logo_main{
+    height: 90px;
+    padding: 20px;
+    background: Black;
+    color: white;
+    cursor: default;
+}
+
+.logo_small{
+    display: inline-block;
+    font-size: 20px;
+    padding: 4px;
+    margin-right: 50px;
+    color: white;
+    cursor: pointer;
+}
+
+.nav{
+    float: left;
+    width: 100%;
+    background: #1A0000;
+    color: white;
+    padding: 0 20px;
+    transition: .3s ease all;
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    z-index: 2;
+}
+
+.nav .wrap{
+    position: relative;
+    left: -150px;
+    transition: 0.4s ease all;
+}
+
+.sm{
+    color: white;
+}
+
+nav{
+    display: inline-block;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+}
+
+nav li{
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+nav a{
+    display: block;
+    padding: 20px;
+    margin: 0;
+    color: lightgreen;
+    text-decoration: none;
+    transition: 0.2s ease all;
+}
+
+nav a:hover{
+    color: white;
+    background: #831414;
+}
+
+body.nav_fixed .nav{
+    position: fixed;
+    top: 0;
+}
+
+body.nav_fixed .nav .wrap{
+    left: 0;
+}
+
+
+.btn-menu{
+    width: 60px;
+    height: 60px;
+    padding: 22px;
+    text-align: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #07178E;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    transition: all 500ms cubic-bezier(1, 0, 0, 1);
+    transform: translateX(100px);
+    z-index: 2;
+}
+
+.btn-menu:hover{
+    transform: scale(1.2);
+    background: #07178E;
+}
+
+
+/*MENU RESPONSIVE*/
+
+@media screen and (max-width: 800px){
+    .btn-menu{
+        transform: translateX(0px);
+    }
+    
+    .logo_main{
+        display: none;
+    }
+    
+    .nav{
+        width: 70%;
+        position: fixed;
+        top: 0;
+        height: 100vh;
+        padding: 0px;
+        transform: translateX(-100%);
+        z-index: 1;
+    }
+    
+    
+    .nav .wrap{
+        left: 0;
+    }
+    
+    nav{
+        width: 100%;
+        position: absolute;
+        top: 60px;
+    }
+    
+    nav li{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+    
+    .logo_small{
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+    
+    nav a{
+        width: 100%;
+        display: block;
+        padding: 20px;
+        margin: 0;
+    }
+    
+    .nav-toggle{
+        transition: all 300ms cubic-bezier(1,0,0,1);
+        transform: translateX(0%);
+    }
+    
+    
+    .main{
+    background: white;
+    padding: 20px; 60px;
+}
